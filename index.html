@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="src/root.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="h1">IP Address Tracker</h1>
+    <div class="search__bar">
+      <input class="input" name="ip" type="text" placeholder="Search for any IP address or domain" />
+      <button class="button" type="submit">
+        <img src="./images/icon-arrow.svg" alt="Найти" />
+      </button>
+    </div>
+    <div class="output__container">
+      <div class="info-block">
+        <h2 class="info-header">IP Address</h2>
+        <h3 class="info" id="ip"></h3>
+      </div>
+      <div class="info-block">
+        <h2 class="info-header">Locations</h2>
+        <h3 class="info" id="location"></h3>
+      </div>
+      <div class="info-block">
+        <h2 class="info-header">Timezone</h2>
+        <h3 class="info">UTC <span id="timezone"></span></h3>
+      </div>
+      <div class="info-block clear-border">
+        <h2 class="info-header">ISP</h2>
+        <h3 class="info" id="isp"></h3>
+      </div>
+    </div>
+  </header>
+  <div class="map__container"></div>
+  <script type="module" src="src/index.js"></script>
+</body>
+
+</html>

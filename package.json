@@ -1,0 +1,21 @@
+{
+  "name": "ip_address_tracker",
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://leoleeeeen.github.io",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --dist-dir=build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bundler": "^0.8.0",
+    "gh-pages": "^6.3.0",
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}
