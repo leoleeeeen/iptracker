@@ -2,10 +2,11 @@
   "name": "ip_address_tracker",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://leoleeeeen.github.io",
+  "homepage": "https://leoleeeeen.github.io/iptracker/",
+  "private": false,
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --dist-dir=build"
+    "build": "parcel build index.html --dist-dir=build --public-url ./"
   },
   "keywords": [],
   "author": "",
