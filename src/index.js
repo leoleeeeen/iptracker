@@ -18,7 +18,7 @@ ipInput.addEventListener('keydown', handleKey);
 const markerIcon = L.icon({
     iconUrl: icon,
     iconSize: [30, 40],
-    iconAnchor: [22, 94]
+    iconAnchor: [15, 40]
 });
 
 const mapArea = document.querySelector('.map__container');

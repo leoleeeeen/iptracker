@@ -6,7 +6,8 @@
   "private": false,
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html --dist-dir=build --public-url ./"
+    "build": "parcel build index.html --dist-dir=build --public-url ./",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
