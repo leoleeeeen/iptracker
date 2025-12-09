@@ -1,4 +1,4 @@
-import { validateIp, newUtc, getAddress, addOffset } from './helpers';
+import { validateIp, newUtc, getAddress, getClientAddress, addOffset } from './helpers';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
@@ -22,12 +22,12 @@ const markerIcon = L.icon({
 });
 
 const mapArea = document.querySelector('.map__container');
-const map = L.map(mapArea).setView([51.505, -0.09], 13);
+const map = L.map(mapArea);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: ''
 }).addTo(map);
-L.marker([51.505, -0.09], { icon: markerIcon }).addTo(map);
+const marker = L.marker([0, 0], { icon: markerIcon }).addTo(map);
 
 function getData() {
     if (validateIp(ipInput.value)) {
@@ -50,13 +50,13 @@ function setInfo(mapData) {
     timezoneInfo.innerText = newUtc(mapData.timezone.utc_offset);
     ispInfo.innerText = mapData.asn.name;
 
-    map.setView([latitude, longitude]);
-    L.marker([latitude, longitude], { icon: markerIcon }).addTo(map);
-    if (matchMedia('(max-width: 1023px').matches) {
+    map.setView([latitude, longitude], 13);
+    marker.setLatLng([latitude, longitude]);
+    if (matchMedia('(max-width: 1023px)').matches) {
         addOffset(map);
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    getAddress('102.22.22.1').then(setInfo);
+    getClientAddress().then(setInfo);
 });
